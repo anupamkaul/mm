@@ -38,6 +38,6 @@ int main(int argc, char *argv[])
 
     g_option_context_free (ctx);
 
-    printf("Run me with --help to see the Application options appended. \n");
+    printf("Run me .. with --help to see the Application options appended. \n");
     return 0;
 }
