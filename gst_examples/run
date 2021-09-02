@@ -1,2 +1,6 @@
+# run me as ./run <filename.c>
+# $1 is the source code file
+# $2 is arguements to the exe
+
 gcc $1 `pkg-config --cflags --libs gstreamer-1.0`
 ./a.out $2 
