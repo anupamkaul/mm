@@ -25,8 +25,6 @@
  *
  */
 
-
-#include <stdio.h>
 #include <gst/gst.h>
 
 int main(int argc, char *argv[]) {
