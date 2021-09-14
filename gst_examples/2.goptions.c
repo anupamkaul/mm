@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     };
    
-    ctx = g_option_context_new ("- Your application"); // create a new context instance
+    ctx = g_option_context_new ("- Anupam's gstreamer application"); // create a new context instance
     g_option_context_add_main_entries (ctx, entries, NULL); // initialize it with the static list of values above
     g_option_context_add_group (ctx, gst_init_get_option_group ());
 
@@ -41,3 +41,20 @@ int main(int argc, char *argv[])
     printf("Run me .. with --help to see the Application options appended. \n");
     return 0;
 }
+
+/* Usage options
+ *
+ * ./run 2.goptions.c --help     (for $1, $2)
+ *
+ * ./a.out --help
+ * ./a.out --help-gst            (these show other options)
+ * ./a.out --help-all
+ *
+ * ./a.out --gst-version
+ * ./a.out --gst-debug-help | more
+ * 
+ * .. etc ..
+ *
+ */
+
+
