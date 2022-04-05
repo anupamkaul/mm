@@ -1,0 +1,44 @@
+How to move a full Git repository
+ 
+
+If you're wrangling multiple Git repositorites, you'll eventually want to move files from one to another. This tutorial will show you how you can move a full Git repository from one remote server to another. The steps below even allow you to choose which branches and tags to include.
+
+Let’s call the original repository ORI and the new one NEW, here are the steps required to copy everything from ORI to NEW:
+
+1. Create a local repository in the temp-dir directory using:
+
+git clone <url to ORI repo> temp-dir
+clone ori repository
+2. Go into the temp-dir directory.
+
+3. To see a list of the different branches in ORI do:
+
+git branch -a
+git branch-a
+4. Checkout all the branches that you want to copy from ORI to NEW using:
+
+git checkout branch-name
+checkout-branches
+5. Now fetch all the tags from ORI using:
+
+git fetch --tags
+git-fetch-tags
+6. Before doing the next step make sure to check your local tags and branches using the following commands:
+
+git tag
+git branch -a
+git-tag-and-git-branch-a
+7. Now clear the link to the ORI repository with the following command:
+
+git remote rm origin
+8. Now link your local repository to your newly created NEW repository using the following command:
+
+git remote add origin <url to NEW repo>
+9. Now push all your branches and tags with these commands:
+
+git push origin --all
+git push --tags
+end-result
+10. You now have a full copy from your ORI repo.
+
+
